@@ -25,14 +25,14 @@ Related Links:
 
 1. Upload the full directory into your wp-content/plugins directory
 2. Activate the plugin at the plugin administration page
-3. Open the plugin configuration page, which is located under Settings -> GAds Dashboard and enter your API Key, Client Secret, Client ID and Table ID.
+3. Open the plugin configuration page, which is located under Settings -> GAds Dashboard and enter your API Key, Client Secret and Client ID.
 4. Go to your Admin Dashboard, look for the widget called Google Adsense Dashboard and authorize the application.
 
 A step by step setup tutorial is available here [Google Adsense Dashboard video tutorial](http://www.deconf.com/en/projects/google-adsense-dashboard-for-wordpress/)
 
 == Frequently Asked Questions == 
 
-= Where can I find my Google API Key, Client Secret, Client ID and Table ID? =
+= Where can I find my Google API Key, Client Secret and Client ID? =
 
 Follow this step by step video tutorial: [Google Adsense Dashboard](http://www.deconf.com/en/projects/google-adsense-dashboard-for-wordpress/)
 
