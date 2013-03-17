@@ -1,0 +1,76 @@
+.adsensetable{
+	font-family:Arial, Verdana; 
+	font-weight:bold; 
+	font-size:10pt;
+	width: 90%;
+}
+.gadsbutton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #fab3ad;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #fab3ad;
+	box-shadow:inset 0px 1px 0px 0px #fab3ad;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fa665a), color-stop(1, #d34639) );
+	background:-moz-linear-gradient( center top, #fa665a 5%, #d34639 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=\'#fa665a\', endColorstr=\'#d34639\');
+	background-color:#fa665a;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #d83526;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:11px;
+	font-weight:bold;
+	padding:4px 3%;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #98231a;
+}
+.gadsbutton:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #d34639), color-stop(1, #fa665a) );
+	background:-moz-linear-gradient( center top, #d34639 5%, #fa665a 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=\'#d34639\', endColorstr=\'#fa665a\');
+	background-color:#d34639;
+}
+.gadsbutton:active {
+	position:relative;
+	top:1px;
+}
+a.adsensetable:link { 
+	color: #FFFFC6; 
+	text-decoration: none;
+}
+a.adsensetable:visited {
+	color: #FFFFC6; 
+	text-decoration: none;
+}
+a.adsensetable:hover {
+	color: #FAFF00; 
+	text-decoration: none;
+}
+
+#adsense_chart1_div{
+	width: 90%;
+	display: block and margin: 0 auto;
+}
+
+table.adsensetable {
+	-moz-box-shadow:inset 0px 1px 0px 0px #fab3ad;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #fab3ad;
+	box-shadow:inset 0px 1px 0px 0px #fab3ad;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fa665a), color-stop(1, #d34639) );
+	background:-moz-linear-gradient( center top, #fa665a 5%, #d34639 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=\'#fa665a\', endColorstr=\'#d34639\');
+	background-color:#fa665a;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #d83526;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:11px;
+	font-weight:bold;
+	padding:2px 2px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #98231a;
+}
