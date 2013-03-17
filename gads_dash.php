@@ -12,8 +12,10 @@ function gads_dash_admin() {
     include('gads_dash_admin.php');  
 } 
 	
-function gads_dash_admin_actions() {  
-    add_options_page("Google Adsense Dashboard", "GAds Dashboard", 1, "Google_Adsense_Dashboard", "gads_dash_admin");     
+function gads_dash_admin_actions() {
+	if (current_user_can('manage_options')) {  
+		add_options_page("Google Adsense Dashboard", "GAds Dashboard", 1, "Google_Adsense_Dashboard", "gads_dash_admin");     
+	}	
 }  
   
 add_action('admin_menu', 'gads_dash_admin_actions'); 
