@@ -4,7 +4,7 @@ Plugin Name: Google Adsense Dashboard for WP
 Plugin URI: http://www.deconf.com
 Description: This plugin will display Google Adsense earnings and statistics into Admin Dashboard. 
 Author: Deconf.com
-Version: 1.0 
+Version: 1.1 
 Author URI: http://www.deconf.com
 */  
 
