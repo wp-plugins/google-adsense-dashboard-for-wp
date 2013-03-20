@@ -10,7 +10,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 This plugin will display your Google Adsense earnings and related reports inside your WordPress Blog, on your Administration Dashboard.
 
 == Description ==
-This plugin is the only one allowing users to create their own Google API Project. Using this plugin you will have your own API Key, Client Secret and Client ID and you won't have to worry about changes made by the developer in its API Project or about limit exceeded because of Google Adsense daily courtesy limit.
+This plugin is the only one allowing users to create their own Google API Project. Using this plugin you will have your own API Key, Client Secret and Client ID and you won't have to worry about changes made by the developer in its API Project or about limit exceeded error because of Adsense API Project daily courtesy limit.
 
 Using a widget, Google Adsense Dashboard for WP displays detailed info and statistics about: Total Earnings, CPC, CTR, CPM, Number of Clicks and Page Views.
 
