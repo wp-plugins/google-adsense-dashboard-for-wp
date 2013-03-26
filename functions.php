@@ -1,5 +1,12 @@
 <?php
 
+function gads_dash_safe_get($key) {
+	if (array_key_exists($key, $_POST)) {
+		return $_POST[$key];
+	}
+	return false;
+}
+
 class AdSenseAuth {
 protected $apiClient;
 protected $adSenseService;

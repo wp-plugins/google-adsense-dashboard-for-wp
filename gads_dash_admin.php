@@ -1,33 +1,30 @@
 <?php
+
+require_once 'functions.php';
+
 if ( !current_user_can( 'manage_options' ) ) {
 	return;
 }
 if (isset($_REQUEST['Reset'])){
-	require_once 'functions.php';
 	$auth = new AdSenseAuth();
 	$result=$auth->gads_dash_reset_token();
 	
 	?><div class="updated"><p><strong><?php _e('Token Reseted.' ); ?></strong></p></div>  
 	<?php
-}else if($_POST['gads_dash_hidden'] == 'Y') {  
+}else if(gads_dash_safe_get('gads_dash_hidden') == 'Y') {  
         //Form data sent  
-        $apikey = $_POST['gads_dash_apikey'];  
+        $apikey = gads_dash_safe_get('gads_dash_apikey');  
         update_option('gads_dash_apikey', sanitize_text_field($apikey));  
           
-        $clientid = $_POST['gads_dash_clientid'];  
+        $clientid = gads_dash_safe_get('gads_dash_clientid');  
         update_option('gads_dash_clientid', sanitize_text_field($clientid));  
           
-        $clientsecret = $_POST['gads_dash_clientsecret'];  
+        $clientsecret = gads_dash_safe_get('gads_dash_clientsecret');  
         update_option('gads_dash_clientsecret', sanitize_text_field($clientsecret));  
           
-        $tableid = $_POST['gads_dash_tableid'];  
+        $tableid = gads_dash_safe_get('gads_dash_tableid');  
         update_option('gads_dash_tableid', sanitize_text_field($tableid));  
-  
-        //$height = $_POST['gads_dash_height'];  
-        //update_option('gads_dash_height', $height);  
-  
-        //$width = $_POST['gads_dash_width'];  
-        //update_option('gads_dash_width', $width);  
+
         ?>  
         <div class="updated"><p><strong><?php _e('Options saved.' ); ?></strong></p></div>  
 <?php  

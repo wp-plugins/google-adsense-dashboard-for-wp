@@ -4,7 +4,7 @@ Plugin Name: Google Adsense Dashboard for WP
 Plugin URI: http://www.deconf.com
 Description: This plugin will display Google Adsense earnings and statistics into Admin Dashboard. 
 Author: Deconf.com
-Version: 1.1 
+Version: 1.2 
 Author URI: http://www.deconf.com
 */  
 
@@ -14,15 +14,18 @@ function gads_dash_admin() {
 	
 function gads_dash_admin_actions() {
 	if (current_user_can('manage_options')) {  
-		add_options_page("Google Adsense Dashboard", "GAds Dashboard", 1, "Google_Adsense_Dashboard", "gads_dash_admin");     
+		add_options_page("Google Adsense Dashboard", "GAds Dashboard", "manage_options", "Google_Adsense_Dashboard", "gads_dash_admin");     
 	}	
 }  
   
 add_action('admin_menu', 'gads_dash_admin_actions'); 
 add_action( 'wp_dashboard_setup', 'gads_dash_setup' );
+add_action('admin_enqueue_scripts', 'gads_dash_admin_enqueue_scripts');
 
-wp_register_style( 'gads_dash', plugins_url('gads_dash.css', __FILE__) );
-wp_enqueue_style( 'gads_dash' );
+function gads_dash_admin_enqueue_scripts() {
+	wp_register_style( 'gads_dash', plugins_url('gads_dash.css', __FILE__) );
+	wp_enqueue_style( 'gads_dash' );
+}
 
 function gads_dash_setup() {
 	if ( current_user_can( 'manage_options' ) ) {
@@ -50,8 +53,8 @@ function gads_dash_content() {
 	$adSense=$auth->getAdSenseService();
 
 
-	$query_adsense = ($_REQUEST['query_adsense']=="") ? "EARNINGS" : $_REQUEST['query_adsense'];
-	$period_adsense = ($_REQUEST['period_adsense']=="") ? "last30days" : $_REQUEST['period_adsense'];
+	$query_adsense = (!gads_dash_safe_get('query_adsense')) ? "EARNINGS" : $_REQUEST['query_adsense'];
+	$period_adsense = (!gads_dash_safe_get('period_adsense')) ? "last30days" : $_REQUEST['period_adsense'];
 
 	switch ($period_adsense){
 
@@ -107,6 +110,7 @@ function gads_dash_content() {
 			}
 			return;	
 	}
+	$chart1_data="";
 	for ($i=0;$i<$data['totalMatchedRows'];$i++){
 		if ($query_adsense=='PAGE_VIEWS_CTR')
 			$chart1_data.="['".$data['rows'][$i][0]."',".($data['rows'][$i][1]*100)."],";
