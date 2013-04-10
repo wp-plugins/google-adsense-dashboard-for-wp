@@ -3,7 +3,7 @@ Contributors: Deconf
 Tags: google adsense, google adsense dashboard, google adsense widget, adsense earnings, adsense stats
 Requires at least: 2.8
 Tested up to: 3.5.1
-Stable tag: 1.2
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
