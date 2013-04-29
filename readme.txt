@@ -62,7 +62,8 @@ This plugin it's released under the GPLv2, you can use it free of charge on your
 = 29.04.2013 - v1.3 =
 
 - fixed buttons on Google Adsense Dashboard
-- added Access Level feature for Google Adsense Dashboard 
+- added Access Level feature for Google Adsense Dashboard
+- added multilingual support (Google Adsense Dashboard *.pot file) 
 
 = 10.04.2013 - v1.2.1 =
 
