@@ -1,26 +1,31 @@
 === Google Adsense Dashboard for WP ===
 Contributors: Deconf
-Tags: google adsense, google adsense dashboard, google adsense widget, adsense earnings, adsense stats
+Tags: google adsense, google adsense dashboard, google adsense widget, adsense earnings, adsense dashboard
 Requires at least: 2.8
 Tested up to: 3.5.1
-Stable tag: 1.2.1
+Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 This plugin will display your Google Adsense earnings and related reports inside your WordPress Blog, on your Administration Dashboard.
 
 == Description ==
-This plugin is the only one allowing users to create their own Google API Project. Using this plugin you will have your own API Key, Client Secret and Client ID and you won't have to worry about changes made by the developer in its API Project or about limit exceeded error because of Adsense API Project daily courtesy limit.
+This plugin will allow users to create their own Google API Project. Using this plugin you will have your own API Key, Client Secret and Client ID and you won't have to worry about changes made by the developer in its API Project or about limit exceeded error because of Adsense API Project daily courtesy limit.
 
-Using a widget, Google Adsense Dashboard for WP displays detailed info and statistics about: Total Earnings, CPC, CTR, CPM, Number of Clicks and Page Views.
+Google Adsense Dashboard for WP main features:
 
-Using this plugin, your data is collected in a fast and secure manner because Google Adsense Dashboard uses OAuth2 protocol and Google Adsense Management API.
+- display detailed info and statistics about: Total Earnings, CPC, CTR, CPM, Number of Clicks and Page Views.
+
+- select date ranges as today, yestarday, last 7 days, last 14 days and last 30 days
+
+- set a default access level. You can give access to your Google Adsense Dashboard to users like editors, authors and contributors.
+
+Using this plugin your data is collected in a fast and secure manner because Google Adsense Dashboard uses OAuth2 protocol and Google Adsense API.
 
 Related Links:
 
 * <a href="http://www.deconf.com/en/projects/google-adsense-dashboard-for-wordpress/" title="Google Adsense Dashboard for WP Plugin">Google Adsense Dashboard Plugin Homepage</a>
 * <a href="http://forum.deconf.com/en/wordpress-plugins-f182/" title="Google Adsense Dashboard for WP Plugin">Google Adsense Dashboard Plugin Support</a>
-
 
 == Installation ==
 
@@ -49,3 +54,22 @@ A dedicated section for Wordpress Plugins is available here: [Wordpress Plugins 
 == License ==
 
 This plugin it's released under the GPLv2, you can use it free of charge on your personal or commercial website.
+
+== Changelog ==
+
+= 29.04.2013 - v1.3 =
+
+- fixed buttons on Google Adsense Dashboard
+- added Access Level feature for Google Adsense Dashboard 
+
+= 10.04.2013 - v1.2.1 =
+
+- a better way to determine google adsense temp dir for cache
+
+= 17.03.2013 - v1.1 =
+
+- fixed Google Adsense Dashboard menu issue
+
+= 16.03.2013 - v1.0 =
+
+- first release

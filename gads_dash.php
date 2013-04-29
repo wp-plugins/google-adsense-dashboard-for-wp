@@ -4,7 +4,7 @@ Plugin Name: Google Adsense Dashboard for WP
 Plugin URI: http://www.deconf.com
 Description: This plugin will display Google Adsense earnings and statistics into Admin Dashboard. 
 Author: Deconf.com
-Version: 1.2.1 
+Version: 1.3 
 Author URI: http://www.deconf.com
 */  
 
@@ -28,7 +28,7 @@ function gads_dash_admin_enqueue_scripts() {
 }
 
 function gads_dash_setup() {
-	if ( current_user_can( 'manage_options' ) ) {
+	if (current_user_can(get_option('gads_dash_access'))) {
 		wp_add_dashboard_widget(
 			'gads-dash-widget',
 			'Google Adsense Dashboard',
@@ -52,9 +52,15 @@ function gads_dash_content() {
 	
 	$adSense=$auth->getAdSenseService();
 
-
-	$query_adsense = (!gads_dash_safe_get('query_adsense')) ? "EARNINGS" : $_REQUEST['query_adsense'];
-	$period_adsense = (!gads_dash_safe_get('period_adsense')) ? "last30days" : $_REQUEST['period_adsense'];
+	if(isset($_REQUEST['query_adsense']))
+		$query_adsense = $_REQUEST['query_adsense'];
+	else	
+		$query_adsense = "EARNINGS";
+		
+	if(isset($_REQUEST['period_adsense']))	
+		$period_adsense = $_REQUEST['period_adsense'];
+	else
+		$period_adsense = "last30days"; 	
 
 	switch ($period_adsense){
 
