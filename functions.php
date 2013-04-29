@@ -57,7 +57,10 @@ public function __construct() {
 		} else {
 			$this->apiClient->setScopes(array("https://www.googleapis.com/auth/adsense.readonly"));
 			if (!isset($_REQUEST['authorize']) AND !isset($_REQUEST['code'])){
-
+				if (!current_user_can('manage_options')){
+					_e("Ask an admin to authorize this Application", 'gads-dash');
+					return;
+				}
 				echo '<div style="padding:20px;"><form name="input" action="#" method="get">
 				<input type="submit" class="button button-primary" name="authorize" value="Authorize Google Adsense Dashboard"/>
 			</form></div>';

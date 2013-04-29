@@ -20,6 +20,8 @@ Google Adsense Dashboard for WP main features:
 
 - set a default access level. You can give access to your Google Adsense Dashboard to users like editors, authors and contributors.
 
+- has multilingual support, a POT file is available for translations. If you have a complete translation, send me the translation file or upload it to our forum and will be included in next release.
+
 Using this plugin your data is collected in a fast and secure manner because Google Adsense Dashboard uses OAuth2 protocol and Google Adsense API.
 
 Related Links:

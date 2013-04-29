@@ -11,6 +11,10 @@ Author URI: http://www.deconf.com
 function gads_dash_admin() {  
     include('gads_dash_admin.php');  
 } 
+
+function gads_dash_init() {
+  	load_plugin_textdomain( 'gads-dash', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+}
 	
 function gads_dash_admin_actions() {
 	if (current_user_can('manage_options')) {  
@@ -21,6 +25,7 @@ function gads_dash_admin_actions() {
 add_action('admin_menu', 'gads_dash_admin_actions'); 
 add_action( 'wp_dashboard_setup', 'gads_dash_setup' );
 add_action('admin_enqueue_scripts', 'gads_dash_admin_enqueue_scripts');
+add_action('plugins_loaded', 'gads_dash_init');
 
 function gads_dash_admin_enqueue_scripts() {
 	wp_register_style( 'gads_dash', plugins_url('gads_dash.css', __FILE__) );
