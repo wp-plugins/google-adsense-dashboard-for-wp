@@ -58,7 +58,7 @@ This plugin it's released under the GPLv2, you can use it free of charge on your
 
 == Changelog ==
 
-= 30.04.2013 - v1.3 =
+= 30.04.2013 - v1.3.1 =
 - small API update
 
 = 29.04.2013 - v1.3 =
