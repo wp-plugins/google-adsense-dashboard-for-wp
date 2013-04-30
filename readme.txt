@@ -1,5 +1,5 @@
 === Google Adsense Dashboard for WP ===
-Contributors: Deconf
+Contributors: deconf
 Tags: google adsense, google adsense dashboard, google adsense widget, adsense earnings, adsense dashboard
 Requires at least: 2.8
 Tested up to: 3.5.1
