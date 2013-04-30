@@ -3,14 +3,13 @@ Contributors: Deconf
 Tags: google adsense, google adsense dashboard, google adsense widget, adsense earnings, adsense dashboard
 Requires at least: 2.8
 Tested up to: 3.5.1
-Stable tag: 1.3
+Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 This plugin will display your Google Adsense earnings and related reports inside your WordPress Blog, on your Administration Dashboard.
 
 == Description ==
-This plugin will allow users to create their own Google API Project. Using this plugin you will have your own API Key, Client Secret and Client ID and you won't have to worry about changes made by the developer in its API Project or about limit exceeded error because of Adsense API Project daily courtesy limit.
 
 Google Adsense Dashboard for WP main features:
 
