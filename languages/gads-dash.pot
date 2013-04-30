@@ -1,0 +1,122 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Google Adsense Dashboard for WP\n"
+"POT-Creation-Date: 2013-04-29 19:28+0200\n"
+"PO-Revision-Date: 2013-04-29 19:29+0200\n"
+"Last-Translator: Deconf <admin@deconf.com>\n"
+"Language-Team: Deconf <admin@deconf.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ../.\n"
+
+#: .././functions.php:61
+msgid "Ask an admin to authorize this Application"
+msgstr ""
+
+#: .././gads_dash_admin.php:12
+msgid "Token Reseted."
+msgstr ""
+
+#: .././gads_dash_admin.php:29
+msgid "Options saved."
+msgstr ""
+
+#: .././gads_dash_admin.php:37
+msgid "Authorized"
+msgstr ""
+
+#: .././gads_dash_admin.php:37
+msgid "Not Authorized"
+msgstr ""
+
+#: .././gads_dash_admin.php:37
+msgid "You will need to authorize the application from your Admin Dashboard"
+msgstr ""
+
+#: .././gads_dash_admin.php:41
+msgid "Google Adsense Dashboard Settings"
+msgstr ""
+
+#: .././gads_dash_admin.php:45
+msgid "Google Adsense Management API"
+msgstr ""
+
+#: .././gads_dash_admin.php:45
+msgid "watch this"
+msgstr ""
+
+#: .././gads_dash_admin.php:45
+msgid "Step by step video tutorial"
+msgstr ""
+
+#: .././gads_dash_admin.php:46
+msgid "API Key:"
+msgstr ""
+
+#: .././gads_dash_admin.php:46
+msgid "AIzaSyASK7dLaii4326AZVyZ6MCOIQOY6F30G_1"
+msgstr ""
+
+#: .././gads_dash_admin.php:47
+msgid "Client ID:"
+msgstr ""
+
+#: .././gads_dash_admin.php:47
+msgid "111342334706.apps.googleusercontent.com"
+msgstr ""
+
+#: .././gads_dash_admin.php:48
+msgid "Client Secret:"
+msgstr ""
+
+#: .././gads_dash_admin.php:48
+msgid "c62POy23C_2qK5fd3fdsec2o"
+msgstr ""
+
+#: .././gads_dash_admin.php:49
+msgid "Application Status:"
+msgstr ""
+
+#: .././gads_dash_admin.php:50
+msgid "Access Level"
+msgstr ""
+
+#: .././gads_dash_admin.php:51
+msgid "View Access Level: "
+msgstr ""
+
+#: .././gads_dash_admin.php:53
+msgid "Administrators"
+msgstr ""
+
+#: .././gads_dash_admin.php:54
+msgid "Editors"
+msgstr ""
+
+#: .././gads_dash_admin.php:55
+msgid "Authors"
+msgstr ""
+
+#: .././gads_dash_admin.php:56
+msgid "Contributors"
+msgstr ""
+
+#: .././gads_dash_admin.php:59
+msgid "Update Options"
+msgstr ""
+
+#: .././gads_dash_admin.php:60
+msgid "Reset Token"
+msgstr ""
+
+#~ msgid ""
+#~ " (watch this <a href='http://www.deconf.com/en/projects/google-analytics-"
+#~ "dashboard-for-wordpress/' target='_blank'>Step by step video tutorial</a>)"
+#~ msgstr ""
+#~ " (watch this <a href='http://www.deconf.com/en/projects/google-analytics-"
+#~ "dashboard-for-wordpress/' target='_blank'>Step by step video tutorial</a>)"
