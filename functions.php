@@ -7,23 +7,37 @@ function gads_dash_safe_get($key) {
 	return false;
 }
 
+function gads_dash_pretty_error($e){
+	return "<center><table><tr><td colspan='2' style='word-break:break-all;'>".$e->getMessage()."<br /><br /></td></tr><tr><td width='50%'><a href='http://wordpress.org/support/plugin/google-adsense-dashboard-for-wp' target='_blank'>".__("Help on Wordpress Forum",'gads-dash')."</a><td width='50%'><a href='http://forum.deconf.com/en/wordpress-plugins-f182/' target='_blank'>".__("Support on Deconf Forum",'gads-dash')."</a></td></tr></table></center>";	
+}
+
 class AdSenseAuth {
-protected $apiClient;
+protected $client;
 protected $adSenseService;
-private $user;
+private $user,$authUrl;
 
 public function __construct() {
 		if (!class_exists('Google_Exception')) {
 			require_once 'src/Google_Client.php';
 		}	
 		require_once 'src/contrib/Google_AdsenseService.php';
-		$scriptUri = "http://".$_SERVER["HTTP_HOST"].$_SERVER['PHP_SELF'];
-		$this->apiClient = new Google_Client();
-		$this->apiClient->setClientId(get_option('gads_dash_clientid'));
-		$this->apiClient->setClientSecret(get_option('gads_dash_clientsecret'));
-		$this->apiClient->setDeveloperKey(get_option('gads_dash_apikey'));
-		$this->apiClient->setRedirectUri($scriptUri);
-		$this->adSenseService = new Google_AdSenseService($this->apiClient);	
+
+		$this->client = new Google_Client();
+		$this->client->setAccessType('offline');
+		$this->client->setApplicationName('Google Adsense Dashboard for WP');
+		$this->client->setRedirectUri('urn:ietf:wg:oauth:2.0:oob');
+		
+		if (get_option('gads_dash_userapi')){		
+				$this->client->setClientId(get_option('gads_dash_clientid'));
+				$this->client->setClientSecret(get_option('gads_dash_clientsecret'));
+				$this->client->setDeveloperKey(get_option('gads_dash_apikey'));
+		}else{
+				$this->client->setClientId('265189663307.apps.googleusercontent.com');
+				$this->client->setClientSecret('B-LxlsVehit2CCzF5ke-SK6T');
+				$this->client->setDeveloperKey('AIzaSyDH3q3w33uLpH4GN25CZqoWE_Nkcpk2UmY');
+			}		
+		
+		$this->adSenseService = new Google_AdSenseService($this->client);	
 }
 
 	function gads_dash_store_token ($user, $token){
@@ -47,35 +61,44 @@ public function __construct() {
 		update_option('gads_dash_token', ""); 
 	
 	}
+
+	function gads_dash_clear_cache(){
+		global $wpdb;
+		$sqlquery=$wpdb->query("DELETE FROM $wpdb->options WHERE option_name LIKE '_transient_gadsdash%%'");
+		$sqlquery=$wpdb->query("DELETE FROM $wpdb->options WHERE option_name LIKE '_transient_timeout_gadsdash%%'");
+	}
 	
 	function authenticate($user) {
 		$this->user=$user;
 		$token = $this->gads_dash_get_token();
 
 		if (isset($token)) {
-		  $this->apiClient->setAccessToken($token);
+		  $this->client->setAccessToken($token);
 		} else {
-			$this->apiClient->setScopes(array("https://www.googleapis.com/auth/adsense.readonly"));
-			if (!isset($_REQUEST['authorize']) AND !isset($_REQUEST['code'])){
+			$this->client->setScopes(array("https://www.googleapis.com/auth/adsense.readonly"));
+			$this->authUrl = $this->client->createAuthUrl();	
+			if (!isset($_REQUEST['gads_dash_authorize'])){
 				if (!current_user_can('manage_options')){
 					_e("Ask an admin to authorize this Application", 'gads-dash');
 					return;
 				}
-				echo '<div style="padding:20px;"><form name="input" action="#" method="get">
-				<input type="submit" class="button button-primary" name="authorize" value="Authorize Google Adsense Dashboard"/>
-			</form></div>';
+			
+				echo '<div style="padding:20px;">'.__("Use this link to get your access code:", 'gads-dash').' <a href="'.$this->authUrl.'" target="_blank">'.__("Get Access Code", 'gads-dash').'</a>';
+				echo '<form name="input" action="#" method="POST">
+							<p><b>'.__("Access Code:", 'gads-dash').' </b><input type="text" name="gads_dash_code" value="" size="61"></p>
+							<input type="submit" class="button button-primary" name="gads_dash_authorize" value="'.__("Save Access Code", 'gads-dash').'"/>
+						</form>
+					</div>';
+				return;
 			}		
-			else if (isset($_REQUEST['code'])) {
-			  $this->apiClient->authenticate();
-			  $this->gads_dash_store_token($this->user, $this->apiClient->getAccessToken());
+			else if (isset($_REQUEST['gads_dash_code'])) {
+			  $this->client->authenticate($_REQUEST['gads_dash_code']);
+			  $this->gads_dash_store_token($this->user, $this->client->getAccessToken());
 			}
 			else{
-			
-			  $authUrl = $this->apiClient->createAuthUrl();
-			  echo '<script> window.location="'.$authUrl.'"; </script> ';
-			  return;
-
-		}
+				$adminurl = admin_url("#gads-dash-widget");
+				echo '<script> window.location="'.$adminurl.'"; </script> ';
+			}
 
 		}
 	}
@@ -85,8 +108,8 @@ public function __construct() {
 	}
 	
 	function gads_dash_refreshToken() {
-		if ($this->apiClient->getAccessToken() != null) {
-			$this->gads_dash_store_token('default', $this->apiClient->getAccessToken());
+		if ($this->client->getAccessToken() != null) {
+			$this->gads_dash_store_token('default', $this->client->getAccessToken());
 		}
 	}	
 

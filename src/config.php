@@ -22,18 +22,18 @@ $apiConfig = array(
     'use_objects' => false,
   
     // The application_name is included in the User-Agent HTTP header.
-    'application_name' => 'Google Adsense Dashboard for WP',
+    'application_name' => 'Google Adsense Dashboard for WordPress',
 
     // OAuth2 Settings, you can get these keys at https://code.google.com/apis/console
-    'oauth2_client_id' => '',
-    'oauth2_client_secret' => '',
-    'oauth2_redirect_uri' => '',
+    'oauth2_client_id' => '265189663307.apps.googleusercontent.com',
+    'oauth2_client_secret' => 'B-LxlsVehit2CCzF5ke-SK6T',
+    'oauth2_redirect_uri' => 'urn:ietf:wg:oauth:2.0:oob',
 
     // The developer key, you get this at https://code.google.com/apis/console
-    'developer_key' => '',
+    'developer_key' => 'AIzaSyDH3q3w33uLpH4GN25CZqoWE_Nkcpk2UmY',
   
     // Site name to show in the Google's OAuth 1 authentication screen.
-    'site_name' => 'www.example.org',
+    'site_name' => 'www.deconf.com',
 
     // Which Authentication, Storage and HTTP IO classes to use.
     'authClass'    => 'Google_OAuth2',
@@ -50,7 +50,7 @@ $apiConfig = array(
             get_temp_dir() . '/Google_Client' :
         '/tmp/Google_Client'),
 
-    // Definition of service specific values like scopes, oauth token URLs, etc
+	// Definition of service specific values like scopes, oauth token URLs, etc
     'services' => array(
       'analytics' => array('scope' => 'https://www.googleapis.com/auth/analytics.readonly'),
       'calendar' => array(
