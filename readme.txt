@@ -1,4 +1,4 @@
-=== Earnings Dashboard ===
+=== Earnings Dashboard for Google Adsense™ ===
 Contributors: deconf
 Tags: google adsense, google adsense dashboard, google adsense widget, adsense earnings, adsense dashboard
 Requires at least: 2.8
