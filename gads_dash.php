@@ -1,10 +1,10 @@
 <?php
 /* 
-Plugin Name: Google Adsense Dashboard for WP
+Plugin Name: Earnings Dashboard
 Plugin URI: http://www.deconf.com
-Description: This plugin will display Google Adsense earnings and statistics into Admin Dashboard. 
+Description: Earnings Dashboard will display Google Adsense earnings and statistics into Admin Dashboard. 
 Author: Deconf.com
-Version: 2.0 
+Version: 2.1 
 Author URI: http://www.deconf.com
 */  
 
@@ -18,7 +18,7 @@ function gads_dash_init() {
 	
 function gads_dash_admin_actions() {
 	if (current_user_can('manage_options')) {  
-		add_options_page("Google Adsense Dashboard", "GAds Dashboard", "manage_options", "Google_Adsense_Dashboard", "gads_dash_admin");     
+		add_options_page("Earnings Dashboard", "Earnings Dashboard", "manage_options", "Earnings_Dashboard", "gads_dash_admin");     
 	}	
 }  
 
@@ -40,7 +40,7 @@ function gads_dash_admin_enqueue_scripts() {
 }
 
 function gads_dash_settings_link($links) { 
-  $settings_link = '<a href="options-general.php?page=Google_Adsense_Dashboard">'.__("Settings",'gads-dash').'</a>'; 
+  $settings_link = '<a href="options-general.php?page=Earnings_Dashboard">'.__("Settings",'gads-dash').'</a>'; 
   array_unshift($links, $settings_link); 
   return $links; 
 }
@@ -49,7 +49,7 @@ function gads_dash_setup() {
 	if (current_user_can(get_option('gads_dash_access'))) {
 		wp_add_dashboard_widget(
 			'gads-dash-widget',
-			'Google Adsense Dashboard',
+			'Earnings Dashboard for Google Adsense™',
 			'gads_dash_content',
 			$control_callback = null
 		);

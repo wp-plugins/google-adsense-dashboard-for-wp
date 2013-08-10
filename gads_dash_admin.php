@@ -113,7 +113,7 @@ if ( is_rtl() ) {
 ?>  
 <div class="wrap">
 <div style="width:70%;float:<?php echo $float_main; ?>;">  
-    <?php echo "<h2>" . __( 'Google Adsense Dashboard Settings', 'gads-dash' ) . "</h2>"; ?>  
+    <?php echo "<h2>" . __( 'Earnings Dashboard Settings', 'gads-dash' ) . "</h2>"; ?>  
         <form name="gads_dash_form" method="post" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>">  
 		<?php echo "<h3>". __( 'Google Adsense API', 'gads-dash' )."</h3>"; ?>  
         <?php echo "<i>".__("You should watch this", 'gads-dash')." <a href='http://www.deconf.com/en/projects/google-adsense-dashboard-for-wordpress/' target='_blank'>". __("Step by step video tutorial")."</a> ".__("before proceeding to authorization", 'gads-dash').". ".__("To authorize this application using our API Project, press the", 'gads_dash')." <b>".__("Authorize Application", 'gads-dash')."</b> ".__(" button. If you want to authorize it using your own API Project, check the option bellow and enter your project credentials before pressing the", 'gads-dash')." <b>".__("Authorize Application", 'gads-dash')."</b> ".__("button.", 'gads-dash')."</i>";?>
@@ -147,19 +147,19 @@ if ( is_rtl() ) {
 							<br /><h3><?php _e("Support Links",'gads-dash') ?></h3>
 						</center>			
 						<ul>
-							<li><a href="http://www.deconf.com/en/projects/google-adsense-dashboard-for-wordpress/" target="_blank"><?php _e("Google Adsense Dashboard Official Page",'gads-dash') ?></a></li>
-							<li><a href="http://wordpress.org/support/plugin/google-adsense-dashboard-for-wp" target="_blank"><?php _e("Google Adsense Dashboard Wordpress Support",'gads-dash') ?></a></li>
-							<li><a href="http://forum.deconf.com/en/wordpress-plugins-f182/" target="_blank"><?php _e("Google Adsense Dashboard on Deconf Forum",'gads-dash') ?></a></li>			
+							<li><a href="http://www.deconf.com/en/projects/google-adsense-dashboard-for-wordpress/" target="_blank"><?php _e("Earnings Dashboard for Google Adsense™ - Official Page",'gads-dash') ?></a></li>
+							<li><a href="http://wordpress.org/support/plugin/google-adsense-dashboard-for-wp" target="_blank"><?php _e("Earnings Dashboard for Google Adsense™ - Wordpress Support",'gads-dash') ?></a></li>
+							<li><a href="http://forum.deconf.com/en/wordpress-plugins-f182/" target="_blank"><?php _e("Earnings Dashboard for Google Adsense™ on Deconf Forum",'gads-dash') ?></a></li>			
 						</ul>
 						<center>
 							<br /><h3><?php _e("Useful Plugins",'gads-dash') ?></h3>
 						</center>			
 						<ul>
-							<li><a href="http://www.deconf.com/en/projects/youtube-analytics-dashboard-for-wordpress/" target="_blank"><?php _e("YouTube Analytics Dashboard",'gads-dash') ?></a></li>
-							<li><a href="http://www.deconf.com/en/projects/google-analytics-dashboard-for-wordpress/" target="_blank"><?php _e("Google Analytics Dashboard",'gads-dash') ?></a></li>
+							<li><a href="http://www.deconf.com/en/projects/youtube-analytics-dashboard-for-wordpress/" target="_blank"><?php _e("YT Analytics Dashboard for Youtube™",'gads-dash') ?></a></li>
+							<li><a href="http://www.deconf.com/en/projects/google-analytics-dashboard-for-wordpress/" target="_blank"><?php _e("GA Dashboard for Google Analytics™",'gads-dash') ?></a></li>
 							<li><a href="http://www.deconf.com/en/projects/clicky-analytics-plugin-for-wordpress/" target="_blank"><?php _e("Clicky Analytics",'gads-dash') ?></a></li>						
 							<li><a href="http://wordpress.org/extend/plugins/follow-us-box/" target="_blank"><?php _e("Follow Us Box",'gads-dash') ?></a></li>			
-						</ul>			
+						</ul>				
 				</div></div><?php				
 				return;
 			} ?>
@@ -213,16 +213,16 @@ if ( is_rtl() ) {
 			<br /><h3><?php _e("Support Links",'gads-dash') ?></h3>
 		</center>			
 		<ul>
-			<li><a href="http://www.deconf.com/en/projects/google-adsense-dashboard-for-wordpress/" target="_blank"><?php _e("Google Adsense Dashboard Official Page",'gads-dash') ?></a></li>
-			<li><a href="http://wordpress.org/support/plugin/google-adsense-dashboard-for-wp" target="_blank"><?php _e("Google Adsense Dashboard Wordpress Support",'gads-dash') ?></a></li>
-			<li><a href="http://forum.deconf.com/en/wordpress-plugins-f182/" target="_blank"><?php _e("Google Adsense Dashboard on Deconf Forum",'gads-dash') ?></a></li>			
+			<li><a href="http://www.deconf.com/en/projects/google-adsense-dashboard-for-wordpress/" target="_blank"><?php _e("Earnings Dashboard for Google Adsense™ - Official Page",'gads-dash') ?></a></li>
+			<li><a href="http://wordpress.org/support/plugin/google-adsense-dashboard-for-wp" target="_blank"><?php _e("Earnings Dashboard for Google Adsense™ - Wordpress Support",'gads-dash') ?></a></li>
+			<li><a href="http://forum.deconf.com/en/wordpress-plugins-f182/" target="_blank"><?php _e("Earnings Dashboard for Google Adsense™ on Deconf Forum",'gads-dash') ?></a></li>			
 		</ul>
 		<center>
 			<br /><h3><?php _e("Useful Plugins",'gads-dash') ?></h3>
 		</center>			
 		<ul>
-			<li><a href="http://www.deconf.com/en/projects/youtube-analytics-dashboard-for-wordpress/" target="_blank"><?php _e("YouTube Analytics Dashboard",'gads-dash') ?></a></li>
-			<li><a href="http://www.deconf.com/en/projects/google-analytics-dashboard-for-wordpress/" target="_blank"><?php _e("Google Analytics Dashboard",'gads-dash') ?></a></li>
+			<li><a href="http://www.deconf.com/en/projects/youtube-analytics-dashboard-for-wordpress/" target="_blank"><?php _e("YT Analytics Dashboard for Youtube™",'gads-dash') ?></a></li>
+			<li><a href="http://www.deconf.com/en/projects/google-analytics-dashboard-for-wordpress/" target="_blank"><?php _e("GA Dashboard for Google Analytics™",'gads-dash') ?></a></li>
 			<li><a href="http://www.deconf.com/en/projects/clicky-analytics-plugin-for-wordpress/" target="_blank"><?php _e("Clicky Analytics",'gads-dash') ?></a></li>						
 			<li><a href="http://wordpress.org/extend/plugins/follow-us-box/" target="_blank"><?php _e("Follow Us Box",'gads-dash') ?></a></li>			
 		</ul>			

@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Google Adsense Dashboard for WP\n"
-"POT-Creation-Date: 2013-07-28 08:41+0200\n"
-"PO-Revision-Date: 2013-07-28 08:41+0200\n"
+"POT-Creation-Date: 2013-08-10 08:59+0200\n"
+"PO-Revision-Date: 2013-08-10 08:59+0200\n"
 "Last-Translator: Deconf <admin@deconf.com>\n"
 "Language-Team: Deconf <admin@deconf.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.5.7\n"
 "X-Poedit-KeywordsList: _e;__\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -46,83 +46,83 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: .././gads_dash.php:296
+#: .././gads_dash.php:300
 msgid "Channel"
 msgstr ""
 
-#: .././gads_dash.php:296 .././gads_dash.php:321
+#: .././gads_dash.php:300 .././gads_dash.php:325
 msgid "Earnings"
 msgstr ""
 
-#: .././gads_dash.php:296 .././gads_dash.php:321
+#: .././gads_dash.php:300 .././gads_dash.php:325
 msgid "CPC"
 msgstr ""
 
-#: .././gads_dash.php:296 .././gads_dash.php:321
+#: .././gads_dash.php:300 .././gads_dash.php:325
 msgid "Clicks"
 msgstr ""
 
-#: .././gads_dash.php:296
+#: .././gads_dash.php:300
 msgid "Views"
 msgstr ""
 
-#: .././gads_dash.php:296 .././gads_dash.php:321
+#: .././gads_dash.php:300 .././gads_dash.php:325
 msgid "CTR"
 msgstr ""
 
-#: .././gads_dash.php:296 .././gads_dash.php:321
+#: .././gads_dash.php:300 .././gads_dash.php:325
 msgid "RPM"
 msgstr ""
 
-#: .././gads_dash.php:321
+#: .././gads_dash.php:325
 msgid "Unit Name"
 msgstr ""
 
-#: .././gads_dash.php:321
+#: .././gads_dash.php:325
 msgid "Requests"
 msgstr ""
 
-#: .././gads_dash.php:344
+#: .././gads_dash.php:348
 msgid "Today"
 msgstr ""
 
-#: .././gads_dash.php:345
+#: .././gads_dash.php:349
 msgid "Yesterday"
 msgstr ""
 
-#: .././gads_dash.php:346
+#: .././gads_dash.php:350
 msgid "Last 7 Days"
 msgstr ""
 
-#: .././gads_dash.php:347
+#: .././gads_dash.php:351
 msgid "Last 14 Days"
 msgstr ""
 
-#: .././gads_dash.php:348
+#: .././gads_dash.php:352
 msgid "Last 30 Days"
 msgstr ""
 
-#: .././gads_dash.php:357
+#: .././gads_dash.php:361
 msgid "Earnings:"
 msgstr ""
 
-#: .././gads_dash.php:359
+#: .././gads_dash.php:363
 msgid "Page Views:"
 msgstr ""
 
-#: .././gads_dash.php:361
+#: .././gads_dash.php:365
 msgid "Clicks:"
 msgstr ""
 
-#: .././gads_dash.php:365
+#: .././gads_dash.php:369
 msgid "Cost/Click:"
 msgstr ""
 
-#: .././gads_dash.php:367
+#: .././gads_dash.php:371
 msgid "Click Through Rate:"
 msgstr ""
 
-#: .././gads_dash.php:369
+#: .././gads_dash.php:373
 msgid "Revenue/Thousand:"
 msgstr ""
 
@@ -139,7 +139,7 @@ msgid "Options saved."
 msgstr ""
 
 #: .././gads_dash_admin.php:116
-msgid "Google Adsense Dashboard Settings"
+msgid "Earnings Dashboard Settings"
 msgstr ""
 
 #: .././gads_dash_admin.php:118
@@ -229,15 +229,15 @@ msgid "Support Links"
 msgstr ""
 
 #: .././gads_dash_admin.php:150 .././gads_dash_admin.php:216
-msgid "Google Adsense Dashboard Official Page"
+msgid "Earnings Dashboard for Google Adsense™ - Official Page"
 msgstr ""
 
 #: .././gads_dash_admin.php:151 .././gads_dash_admin.php:217
-msgid "Google Adsense Dashboard Wordpress Support"
+msgid "Earnings Dashboard for Google Adsense™ - Wordpress Support"
 msgstr ""
 
 #: .././gads_dash_admin.php:152 .././gads_dash_admin.php:218
-msgid "Google Adsense Dashboard on Deconf Forum"
+msgid "Earnings Dashboard for Google Adsense™ on Deconf Forum"
 msgstr ""
 
 #: .././gads_dash_admin.php:155 .././gads_dash_admin.php:221
@@ -245,11 +245,11 @@ msgid "Useful Plugins"
 msgstr ""
 
 #: .././gads_dash_admin.php:158 .././gads_dash_admin.php:224
-msgid "YouTube Analytics Dashboard"
+msgid "YT Analytics Dashboard for Youtube™"
 msgstr ""
 
 #: .././gads_dash_admin.php:159 .././gads_dash_admin.php:225
-msgid "Google Analytics Dashboard"
+msgid "GA Dashboard for Google Analytics™"
 msgstr ""
 
 #: .././gads_dash_admin.php:160 .././gads_dash_admin.php:226
