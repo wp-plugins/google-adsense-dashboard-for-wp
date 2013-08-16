@@ -147,8 +147,8 @@ if ( is_rtl() ) {
 							<br /><h3><?php _e("Support Links",'gads-dash') ?></h3>
 						</center>			
 						<ul>
-							<li><a href="http://www.deconf.com/en/projects/google-adsense-dashboard-for-wordpress/" target="_blank"><?php _e("Earnings Dashboard Official Page",'gads-dash') ?></a></li>
-							<li><a href="http://wordpress.org/support/plugin/google-adsense-dashboard-for-wp" target="_blank"><?php _e("Earnings Dashboard Wordpress Support",'gads-dash') ?></a></li>
+							<li><a href="http://www.deconf.com/en/projects/google-adsense-dashboard-for-wordpress/" target="_blank"><?php _e("Earnings Dashboard - Official Page",'gads-dash') ?></a></li>
+							<li><a href="http://wordpress.org/support/plugin/google-adsense-dashboard-for-wp" target="_blank"><?php _e("Earnings Dashboard - Wordpress Support",'gads-dash') ?></a></li>
 							<li><a href="http://forum.deconf.com/en/wordpress-plugins-f182/" target="_blank"><?php _e("Earnings Dashboard on Deconf Forum",'gads-dash') ?></a></li>			
 						</ul>
 						<center>
