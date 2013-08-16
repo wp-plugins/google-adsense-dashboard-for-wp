@@ -1,6 +1,6 @@
 === Earnings Dashboard ===
 Contributors: deconf
-Tags: adsense, google adsense, google adsense dashboard, adsense widget, adsense earnings, adsense dashboard
+Tags: adsense, google, dashboard, google adsense, google adsense dashboard, adsense widget, adsense earnings, adsense dashboard
 Requires at least: 2.8
 Tested up to: 3.5.2
 Stable tag: 2.1
