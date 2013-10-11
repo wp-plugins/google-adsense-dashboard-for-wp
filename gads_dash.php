@@ -1,6 +1,6 @@
 <?php
 /* 
-Plugin Name: Earnings Dashboard
+Plugin Name: Google Adsense Dashboard
 Plugin URI: http://www.deconf.com
 Description: Earnings Dashboard will display Google Adsense earnings and statistics into Admin Dashboard. 
 Author: Alin Marcu
