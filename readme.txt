@@ -1,5 +1,6 @@
 === Google Adsense Dashboard ===
 Contributors: deconf
+Donate link: http://deconf.com/donate/
 Tags: adsense, google, dashboard, google adsense, google adsense dashboard, adsense dashboard, earnings
 Requires at least: 2.8
 Tested up to: 3.5.2
