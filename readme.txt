@@ -12,7 +12,7 @@ Earnings Dashboard will display your Google Adsense revenue and related reports 
 
 == Description ==
 
-Using a widget, <a href="http://deconf.com/earnings-dashboard-google-adsense-wordpress/" rel="me">Earnings Dashboard</a> displays detailed Google AdSense statistics and reports, on your website, under your administration panel. 
+Using a widget, <a href="http://deconf.com/earnings-dashboard-google-adsense-wordpress/" title="Earnings Dashboard" rel="me">Earnings Dashboard</a> displays detailed Google AdSense statistics and reports, on your website, under your administration panel. 
 
 = Earnings Dashboard for Google Adsense™ main features =
 
@@ -35,7 +35,7 @@ Using this plugin your data is collected in a fast and secure manner because Ear
 = Further reading and info =
 
 * My [Earnings Dashboard](http://deconf.com/earnings-dashboard-google-adsense-wordpress/) homepage
-* Other <a href="http://deconf.com/wordpress/" rel="me">WordPress Plugins</a> by same author
+* Other <a href="http://deconf.com/wordpress/" title="WordPress Plugins" rel="friend">WordPress Plugins</a> by same author
 * [Earnings Dashboard](http://deconf.com/ask/) translations and support 
 
 == Installation ==
