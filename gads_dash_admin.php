@@ -342,7 +342,7 @@ if (is_rtl ()) {
 						href="http://wordpress.org/support/view/plugin-reviews/clicky-analytics#plugin-info"><img
 						src="<?php echo plugins_url( 'images/star.png' , __FILE__ ); ?>" /></a>
 				</div>
-				<div class="gads-desc"><?php echo  __('Your feedback and review are both important,', 'gads-dash').' <a href="http://wordpress.org/support/view/plugin-reviews/clicky-analytics#plugin-info">'.__('rate this plugin', 'gads-dash').'</a>!'; ?></div>
+				<div class="gads-desc"><?php echo  __('Your feedback and review are both important,', 'gads-dash').' <a href="http://wordpress.org/support/view/plugin-reviews/google-adsense-dashboard-for-wp">'.__('rate this plugin', 'gads-dash').'</a>!'; ?></div>
 			</div>
 		</div>
 		<div class="postbox">
