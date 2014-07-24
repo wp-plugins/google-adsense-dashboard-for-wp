@@ -1,27 +1,30 @@
 === Google Adsense Dashboard ===
 Contributors: deconf
+Donate link: http://deconf.com/donate/
 Tags: adsense, google, dashboard, google adsense, google adsense dashboard, adsense dashboard, earnings
 Requires at least: 2.8
 Tested up to: 3.5.2
-Stable tag: 2.1
+Stable tag: 2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Earnings Dashboard will display your Google Adsense earnings and related reports inside your WordPress Blog, on your Administration Dashboard.
+Earnings Dashboard will display your Google Adsense revenue and related reports inside your WordPress Blog, on your Administration Dashboard.
 
 == Description ==
 
-Earnings Dashboard for Google Adsense™ main features:
+Using a widget, [Earnings Dashboard](http://deconf.com/earnings-dashboard-google-adsense-wordpress/) displays detailed Google AdSense statistics and reports, on your website, under your administration panel. 
 
-- display detailed info and statistics about: Total Earnings, CPC, CTR, CPM, Number of Clicks and Page Views.
+= Earnings Dashboard for Google Adsense™ main features =
 
-- select date ranges as today, yestarday, last 7 days, last 14 days and last 30 days
+- display detailed adsense statistics like: Total Earnings, CPC, CTR, CPM, Number of Clicks and Page Views
 
-- custom channels performance report in a table
+- option to select date ranges for your adsense reports: today, yestarday, last 7 days, last 14 days and last 30 days
 
-- ad units performance report in a table
+- adsense custom channels performance report in a table
 
-- set a default access level. You can give access to your Earnings Dashboard to users like editors, authors and contributors.
+- adsense ad units performance report in a table
+
+- set a default access level; you can give access to your Earnings Dashboard to users like editors, authors and/or contributors
 
 - improved page loading speeds using a dedicated cache system
 
@@ -29,10 +32,11 @@ Earnings Dashboard for Google Adsense™ main features:
 
 Using this plugin your data is collected in a fast and secure manner because Earnings Dashboard uses OAuth2 protocol and Google Adsense API.
 
-Related Links:
+= Further reading and info =
 
-* <a href="http://www.deconf.com/en/projects/google-adsense-dashboard-for-wordpress/" title="Earnings Dashboard for Google Adsense">Earnings Dashboard for Google Adsense - Plugin Homepage</a>
-* <a href="http://forum.deconf.com/en/wordpress-plugins-f182/" title="Earnings Dashboard for Google Adsense">Earnings Dashboard for Google Adsense - Plugin Support</a>
+* My [Earnings Dashboard](http://deconf.com/earnings-dashboard-google-adsense-wordpress/) homepage
+* Other [WordPress Plugins](http://deconf.com/wordpress/) by same author
+* [Earnings Dashboard](http://deconf.com/ask/) translations and support 
 
 == Installation ==
 
@@ -66,10 +70,20 @@ This plugin it's released under the GPLv2, you can use it free of charge on your
 
 == Changelog ==
 
-= 10.08.2013 - v2.1 =
+= v2.2 =
+- bugfix: notices and warnings in main dashboard
+- language file updates
+- hardening security
+- data validation and sanitization
+- redesigned dashboard
+- css tweaks 
+- updated translation file
+- cleanup database on uninstall
+
+= v2.1 =
 - renamed the plugin to Earnings Dashboard
 
-= 28.07.2013 - v2.0 =
+= v2.0 =
 - plugin rewritten from scratch
 - updated to latest Google Adsense API version
 - major changes in authorization process 
@@ -77,23 +91,19 @@ This plugin it's released under the GPLv2, you can use it free of charge on your
 - added custom channels performance report in a table
 - added ad units performance report in a table
 
-= 30.04.2013 - v1.3.1 =
+= v1.3.1 =
 - small API update
 
-= 29.04.2013 - v1.3 =
-
+= v1.3 =
 - fixed buttons on Earnings Dashboard for Google Adsense
 - added Access Level feature for Earnings Dashboard for Google Adsense
 - added multilingual support (Earnings Dashboard for Google Adsense *.pot file) 
 
-= 10.04.2013 - v1.2.1 =
-
+= v1.2.1 =
 - a better way to determine google adsense temp dir for cache
 
-= 17.03.2013 - v1.1 =
-
+= v1.1 =
 - fixed Earnings Dashboard for Google Adsense menu issue
 
-= 16.03.2013 - v1.0 =
-
+= v1.0 =
 - first release
