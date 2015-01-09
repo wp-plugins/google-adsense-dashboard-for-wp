@@ -1,23 +1,21 @@
 <?php
 /**
  * Plugin Name: Google Adsense Dashboard
- * Plugin URI: http://deconf.com 
+ * Plugin URI: https://deconf.com 
  * Description: Earnings Dashboard will display Google Adsense earnings and statistics into Admin Dashboard.
  * Author: Alin Marcu 
- * Version: 2.2 
- * Author URI: http://deconf.com
+ * Version: 2.2.1 
+ * Author URI: https://deconf.com
  */
-
 
 /*
  * Install
-*/
+ */
 register_activation_hook ( __FILE__, 'gads_dash_install' );
 /*
  * Uninstall
-*/
+ */
 register_uninstall_hook ( __FILE__, 'gads_dash_uninstall' );
-
 function gads_dash_admin() {
 	include ('gads_dash_admin.php');
 }
@@ -37,11 +35,12 @@ add_action ( 'admin_enqueue_scripts', 'gads_dash_admin_enqueue_styles' );
 add_action ( 'plugins_loaded', 'gads_dash_init' );
 add_filter ( "plugin_action_links_$plugin", 'gads_dash_settings_link' );
 function gads_dash_admin_enqueue_styles($hook) {
+    
 	$valid_hooks = array (
-			'settings_page_Earnings_Dashboard'
+			'settings_page_Earnings_Dashboard' 
 	);
 	
-	if (! in_array ( $hook, $valid_hooks ) and 'index.php' != $hook){
+	if (! in_array ( $hook, $valid_hooks ) and 'index.php' != $hook) {
 		return;
 	}
 	
@@ -61,8 +60,8 @@ function gads_dash_setup() {
 	}
 }
 function gads_dash_install() {
-	update_option ( 'gads_dash_ads', 0);
-	update_option ( 'gads_dash_channels', 0);
+	update_option ( 'gads_dash_ads', 0 );
+	update_option ( 'gads_dash_channels', 0 );
 	update_option ( 'gads_dash_access', 'manage_options' );
 	update_option ( 'gads_dash_style', 'green' );
 	update_option ( 'gads_dash_cachetime', 3600 );
@@ -79,8 +78,8 @@ function gads_dash_uninstall() {
 			switch_to_blog ( $blog ['blog_id'] );
 			$sqlquery = $wpdb->query ( "DELETE FROM $wpdb->options WHERE option_name LIKE '_transient_gadsdash%%'" );
 			$sqlquery = $wpdb->query ( "DELETE FROM $wpdb->options WHERE option_name LIKE '_transient_timeout_gadsdash%%'" );
-			delete_option ( 'gads_dash_ads', 0);
-			delete_option ( 'gads_dash_channels', 0);
+			delete_option ( 'gads_dash_ads', 0 );
+			delete_option ( 'gads_dash_channels', 0 );
 			delete_option ( 'gads_dash_access', 'manage_options' );
 			delete_option ( 'gads_dash_style', 'green' );
 			delete_option ( 'gads_dash_cachetime', 3600 );
@@ -94,8 +93,8 @@ function gads_dash_uninstall() {
 	} else { // Cleanup Single install
 		$sqlquery = $wpdb->query ( "DELETE FROM $wpdb->options WHERE option_name LIKE '_transient_gadsdash%%'" );
 		$sqlquery = $wpdb->query ( "DELETE FROM $wpdb->options WHERE option_name LIKE '_transient_timeout_gadsdash%%'" );
-		delete_option ( 'gads_dash_ads', 0);
-		delete_option ( 'gads_dash_channels', 0);
+		delete_option ( 'gads_dash_ads', 0 );
+		delete_option ( 'gads_dash_channels', 0 );
 		delete_option ( 'gads_dash_access', 'manage_options' );
 		delete_option ( 'gads_dash_style', 'green' );
 		delete_option ( 'gads_dash_cachetime', 3600 );
@@ -228,7 +227,7 @@ function gads_dash_content() {
 			$gads_chart1_data .= "['" . $data ['rows'] [$i] [0] . "'," . $data ['rows'] [$i] [1] . "],";
 	}
 	
-	$gads_chart1_data = wp_kses(rtrim ( $gads_chart1_data, ',' ),'');
+	$gads_chart1_data = wp_kses ( rtrim ( $gads_chart1_data, ',' ), '' );
 	
 	$optParams = array (
 			'metric' => array (
@@ -304,7 +303,7 @@ function gads_dash_content() {
 		$validate_rpm = ($chdata ['rows'] [$i] [6] == "") ? 0.00 : $chdata ['rows'] [$i] [6];
 		$gads_ch_data .= "['" . $chdata ['rows'] [$i] [0] . "'," . $chdata ['rows'] [$i] [1] . "," . $chdata ['rows'] [$i] [2] . "," . $chdata ['rows'] [$i] [3] . "," . $chdata ['rows'] [$i] [4] . "," . ($chdata ['rows'] [$i] [5] * 100) . "," . $validate_rpm . "],";
 	}
-	$gads_ch_data = wp_kses(rtrim ( $gads_ch_data, ',' ),'');
+	$gads_ch_data = wp_kses ( rtrim ( $gads_ch_data, ',' ), '' );
 	
 	// Ads Performance
 	
@@ -346,7 +345,7 @@ function gads_dash_content() {
 	for($i = 0; $i < $adsdata ['totalMatchedRows']; $i ++) {
 		$gads_ads_data .= "['" . $adsdata ['rows'] [$i] [0] . "'," . $adsdata ['rows'] [$i] [1] . "," . $adsdata ['rows'] [$i] [2] . "," . $adsdata ['rows'] [$i] [3] . "," . $adsdata ['rows'] [$i] [4] . "," . ($adsdata ['rows'] [$i] [5] * 100) . "," . $adsdata ['rows'] [$i] [6] . "],";
 	}
-	$gads_ads_data = wp_kses(rtrim ( $gads_ads_data, ',' ),'');
+	$gads_ads_data = wp_kses ( rtrim ( $gads_ads_data, ',' ), '' );
 	
 	$code = '<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 	<script type="text/javascript">
@@ -367,14 +366,14 @@ function gads_dash_content() {
 		var data = google.visualization.arrayToDataTable([' . "
 		  ['Date', '" . $title . "']," . $gads_chart1_data . "  
 		]);
-
+		      
 		var options = {
 		  legend: {position: 'none'},	
-		  pointSize: 3," . $css . "
-		  title: '" . $title . "',titleTextStyle: {color: '#000000'},
-		  chartArea: {width: '90%'},
-		  vAxis: {minValue: 0},
-		  hAxis: { title: 'Date',  titleTextStyle: {color: '" . $colors . "'}, showTextEvery: 5}
+		  pointSize: 3,".$css."
+          title: '".$title."',
+       	  chartArea: {width: '99%',height: '90%'},
+	      vAxis: { textPosition: 'in', minValue: 0},
+	      hAxis: { textPosition: 'none' }
 		};
 
 		var chart = new google.visualization.AreaChart(document.getElementById('adsense_chart1_div'));
@@ -427,17 +426,17 @@ function gads_dash_content() {
 		  }";
 		}
 	}
-	$btn_class = (get_option ( 'gads_dash_style' ) == 'green')?'gadsbutton':'button button-secondary';
+	$btn_class = (get_option ( 'gads_dash_style' ) == 'green') ? 'gadsbutton' : 'button button-secondary';
 	$code .= "</script>" . '
 	<div id="gads-dash">
 	<center>
 		<div id="buttons_div_adsense">
 		<center>
-			<input class="'.$btn_class.'" type="button" value="' . __ ( "Today", 'gads-dash' ) . '" onClick="window.location=\'?period_adsense=today&query_adsense=' . $query_adsense . '\'" />
-			<input class="'.$btn_class.'" type="button" value="' . __ ( "Yesterday", 'gads-dash' ) . '" onClick="window.location=\'?period_adsense=yesterday&query_adsense=' . $query_adsense . '\'" />
-			<input class="'.$btn_class.'" type="button" value="' . __ ( "7 Days", 'gads-dash' ) . '" onClick="window.location=\'?period_adsense=last7days&query_adsense=' . $query_adsense . '\'" />
-			<input class="'.$btn_class.'" type="button" value="' . __ ( "14 Days", 'gads-dash' ) . '" onClick="window.location=\'?period_adsense=last14days&query_adsense=' . $query_adsense . '\'" />
-			<input class="'.$btn_class.'" type="button" value="' . __ ( "30 Days", 'gads-dash' ) . '" onClick="window.location=\'?period_adsense=last30days&query_adsense=' . $query_adsense . '\'" />
+			<input class="' . $btn_class . '" type="button" value="' . __ ( "Today", 'gads-dash' ) . '" onClick="window.location=\'?period_adsense=today&query_adsense=' . $query_adsense . '\'" />
+			<input class="' . $btn_class . '" type="button" value="' . __ ( "Yesterday", 'gads-dash' ) . '" onClick="window.location=\'?period_adsense=yesterday&query_adsense=' . $query_adsense . '\'" />
+			<input class="' . $btn_class . '" type="button" value="' . __ ( "7 Days", 'gads-dash' ) . '" onClick="window.location=\'?period_adsense=last7days&query_adsense=' . $query_adsense . '\'" />
+			<input class="' . $btn_class . '" type="button" value="' . __ ( "14 Days", 'gads-dash' ) . '" onClick="window.location=\'?period_adsense=last14days&query_adsense=' . $query_adsense . '\'" />
+			<input class="' . $btn_class . '" type="button" value="' . __ ( "30 Days", 'gads-dash' ) . '" onClick="window.location=\'?period_adsense=last30days&query_adsense=' . $query_adsense . '\'" />
 		</center>
 		</div>
 		
@@ -447,19 +446,19 @@ function gads_dash_content() {
 			<table class="adsensetable" cellpadding="4">
 			<tr>
 			<td width=="24%">' . __ ( "Earnings:", 'gads-dash' ) . '</td>
-			<td width="12%" class="adsensevalue"><a href="?query_adsense=EARNINGS&period_adsense=' . $period_adsense . '" class="adsensetable">' . (float)$gads_sum_data ['rows'] [0] [0] . '</td>
+			<td width="12%" class="adsensevalue"><a href="?query_adsense=EARNINGS&period_adsense=' . $period_adsense . '" class="adsensetable">' . ( float ) $gads_sum_data ['rows'] [0] [0] . '</td>
 			<td width="30%">' . __ ( "Views:", 'gads-dash' ) . '</td>
-			<td width="12%" class="adsensevalue"><a href="?query_adsense=PAGE_VIEWS&period_adsense=' . $period_adsense . '" class="adsensetable">' . (int)$gads_sum_data ['rows'] [0] [3] . '</a></td>
+			<td width="12%" class="adsensevalue"><a href="?query_adsense=PAGE_VIEWS&period_adsense=' . $period_adsense . '" class="adsensetable">' . ( int ) $gads_sum_data ['rows'] [0] [3] . '</a></td>
 			<td width="24%">' . __ ( "Clicks:", 'gads-dash' ) . '</td>
-			<td width="12%" class="adsensevalue"><a href="?query_adsense=CLICKS&period_adsense=' . $period_adsense . '" class="adsensetable">' . (int)$gads_sum_data ['rows'] [0] [2] . '</a></td>
+			<td width="12%" class="adsensevalue"><a href="?query_adsense=CLICKS&period_adsense=' . $period_adsense . '" class="adsensetable">' . ( int ) $gads_sum_data ['rows'] [0] [2] . '</a></td>
 			</tr>
 			<tr>
 			<td>' . __ ( "CPC:", 'gads-dash' ) . '</td>
-			<td class="adsensevalue"><a href="?query_adsense=COST_PER_CLICK&period_adsense=' . $period_adsense . '" class="adsensetable">' . (float)$gads_sum_data ['rows'] [0] [1] . '</a></td>
+			<td class="adsensevalue"><a href="?query_adsense=COST_PER_CLICK&period_adsense=' . $period_adsense . '" class="adsensetable">' . ( float ) $gads_sum_data ['rows'] [0] [1] . '</a></td>
 			<td>' . __ ( "CTR:", 'gads-dash' ) . '</td>
-			<td class="adsensevalue"><a href="?query_adsense=PAGE_VIEWS_CTR&period_adsense=' . $period_adsense . '" class="adsensetable">' . (float)($gads_sum_data ['rows'] [0] [4] * 100) . '</a></td>
+			<td class="adsensevalue"><a href="?query_adsense=PAGE_VIEWS_CTR&period_adsense=' . $period_adsense . '" class="adsensetable">' . ( float ) ($gads_sum_data ['rows'] [0] [4] * 100) . '</a></td>
 			<td>' . __ ( "RPM:", 'gads-dash' ) . '</td>
-			<td class="adsensevalue"><a href="?query_adsense=PAGE_VIEWS_RPM&period_adsense=' . $period_adsense . '" class="adsensetable">' . (float)$gads_sum_data ['rows'] [0] [5] . '</a></td>
+			<td class="adsensevalue"><a href="?query_adsense=PAGE_VIEWS_RPM&period_adsense=' . $period_adsense . '" class="adsensetable">' . ( float ) $gads_sum_data ['rows'] [0] [5] . '</a></td>
 			</tr>
 			</table>
 		</div>
